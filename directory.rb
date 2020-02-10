@@ -8,3 +8,7 @@ puts "Harry Potter"
 puts "Lavdener Brown"
 puts "Parvati Patil"
 puts "Luna Lovegood"
+
+print "Overall, we have "
+print 8
+puts " great students"
