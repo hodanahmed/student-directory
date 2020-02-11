@@ -34,8 +34,10 @@ end
 def print(students)
 students.each_with_index do |student, index|
   new_index = index + 1
+  if student[:name].length < 12
 puts "#{new_index}: #{student[:name]} (#{student[:house]} : #{student[:cohort]} cohort). From #{student[:country_of_birth]}, Hobbies include:  #{student[:hobbies]}. They are #{student[:height]}"
-
+else
+end
 end
 end
 
