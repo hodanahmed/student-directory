@@ -36,12 +36,15 @@ students.each_with_index do |student, index|
   new_index = index + 1
   student[:name].split('')
   if student[:name].length < 12 && student[:name].include?("h")
-puts "#{new_index}: #{student[:name]} (#{student[:house]} : #{student[:cohort]} cohort). From #{student[:country_of_birth]}, Hobbies include:  #{student[:hobbies]}. They are #{student[:height]}"
+puts "#{new_index}: #{student[:name]}".center(50)
+puts "(#{student[:house]} : #{student[:cohort]} cohort)".center(50)
+puts "From #{student[:country_of_birth]},".center(50)
+puts " Hobbies include:  #{student[:hobbies]}.".center(50)
+puts "They are #{student[:height]}".center(50)
 else
 end
 end
 end
-
 
 def print_footer(students)
 puts "Overall, we have #{students.count} great students"
