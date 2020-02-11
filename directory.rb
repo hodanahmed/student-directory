@@ -27,14 +27,13 @@ def input_students
 end
 
 def print_header
-puts "The students of Hogwarts School of Witchcraft and Wizardry."
-puts "----------------------------------------------------------"
+puts "The students of Hogwarts School of Witchcraft and Wizardry.".center(50)
+puts "----------------------------------------------------------".center(50)
 end
 
 def print(students)
 students.each_with_index do |student, index|
   new_index = index + 1
-  student[:name].split('')
   if student[:name].length < 12 && student[:name].include?("h")
 puts "#{new_index}: #{student[:name]}".center(50)
 puts "(#{student[:house]} : #{student[:cohort]} cohort)".center(50)
@@ -46,11 +45,13 @@ end
 end
 end
 
+
+
 def print_footer(students)
-puts "Overall, we have #{students.count} great students"
+puts "Overall, we have #{students.count} great students".center(50)
 end
 
 students = input_students
-print(students)
 print_header
+print(students)
 print_footer(students)
